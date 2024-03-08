@@ -1,0 +1,239 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    background-color: black;
+}
+
+header.navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end; 
+    max-width: 1200px; 
+    width: 100%;
+    margin: auto; 
+    justify-content: space-around; 
+    
+    
+}
+
+header.navbar-container .logo {
+    width: 200px;
+}
+
+
+header.navbar-container .search {
+    position: fixed;
+    top: 7%;
+    flex-grow: 1;
+    width: 45%;
+    margin-top: -13px;
+    margin-left: 300px;
+    align-items: center;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#search-form {
+    
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+#search-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+
+#search-form span {
+    color: white;
+    padding: 10px;
+}
+
+#search-form button[type="submit"] {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header.navbar-container .logo img{
+    width: 200px;
+  
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+
+}
+
+header.navbar-container .nav-list {
+    /* margin: 0; */
+    /* padding: 0; */
+    list-style: none;
+    display: flex;
+   
+}
+
+header.navbar-container .nav-list a {
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin: 30px;
+    padding: 2px;
+    background-color: black;
+    justify-content: space-around;
+    
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+    list-style: none;
+    
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: white;
+    color: purple;
+    
+}
+
+main {
+    margin-top: 150px;
+}
+
+.content{
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    margin-left: 60px;
+    margin-right: 100px ;
+}
+
+aside.social-media ul {
+    justify-content: center;
+    
+}
+
+footer {
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: purple;
+    background-color: white;
+}
+
+footer p {
+    background-color: white;
+    color: black;
+}
+main aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+
+main aside .socialmedia-card {
+    display: flex;
+    flex: 1;
+}
+main aside .socialmedia-card img {
+    width: 30px;
+}
+   
+   
+
+main .content .content-description button {
+    padding: .8rem 2.5rem;
+    margin-block-start: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+
+    
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-color: purple;
+    cursor: pointer;
+    transition: all .15s ease-in;
+}
+
+main .content .content-description button:hover {
+    border: 3px solid white;
+    color: purple;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    /* Penyesuaian untuk layar dengan lebar maksimum 768px */
+    header.navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    header.navbar-container .logo {
+        order: -1;
+    }
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    main {
+        margin-top: 100px;
+    }
+
+    header.navbar-container .search {
+        flex-wrap: wrap;
+        width: auto;
+        
+    }
+    \ main aside {
+        position: static; /* Mengembalikan posisi elemen aside ke posisi aslinya */
+        width: 100%; /* Mengisi lebar seluruh layar */
+        margin: 10px 0; /* Menambahkan jarak di atas dan di bawah */
+    }
+    
+    main aside .social-media ul {
+        flex-direction: row ; /* Mengatur ul menjadi baris daripada kolom */
+        padding: 0; /* Menghapus padding */
+        justify-content: space-around; /* Mengatur jarak antara ikon sosial media */
+    }
+    /* Tambahkan penyesuaian lain sesuai kebutuhan */
+}
+
+
