@@ -1,2 +1,2 @@
 # project-exercise
-LATIHAN
+LATIHAN GITHUB
